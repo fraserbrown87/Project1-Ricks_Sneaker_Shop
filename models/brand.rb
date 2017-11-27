@@ -3,7 +3,7 @@ require_relative("./model.rb")
 
 class Brand
 
-  attr_reader :id, :name
+  attr_reader :id, :brand_name
 
   def initialize(options)
     @id = options['id'].to_i
@@ -13,7 +13,8 @@ class Brand
   def save()
     sql = "INSERT INTO brands (brand_name) VALUES ($1) Returning *"
     values = [@brand_name]
-    @id = SqlRunner.run(sql, values)[0]["id"].to_i
+    result = SqlRunner.run(sql, values)
+    @id = result.first()['id'].to_i
   end
 
   def update()
@@ -26,7 +27,7 @@ class Brand
     sql = "SELECT * FROM brands"
     values = []
     brands = SqlRunner.run(sql,values)
-    result = brands.map {|pizza| Pizza.new(brand)}
+    result = brands.map {|brand| Brand.new(brand)}
   end
 
   def self.find(id)
@@ -36,4 +37,5 @@ class Brand
     result = Brand.new(brand.first)
     return result
   end
+
 end
