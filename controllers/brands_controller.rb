@@ -14,7 +14,7 @@ end
 post '/brands' do # create
   @brand = Brand.new( params )
   @brand.save()
-  erb (:"brands/index")
+  redirect to "/brands"
 end
 
 get '/brands/:id' do
