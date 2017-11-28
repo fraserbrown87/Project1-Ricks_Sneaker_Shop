@@ -1,0 +1,26 @@
+<h1>Rick's Sneaker Store</h1>
+<table style="width:100%">
+<section>
+  <h2>All Stock</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Brand Name</th>
+        <th>Model Name</th>
+        <th>Quantity</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      </tr>
+      <% @models.each do |model| %>
+
+        <td><%=model.brand.brand_name%></td>
+        <td><%=model.model_name%></td>
+        <td><%=model.quantity%></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</section>

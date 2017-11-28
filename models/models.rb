@@ -1,5 +1,5 @@
 require_relative("../db/sql_runner.rb")
-require_relative("./brand.rb")
+require_relative("./brands.rb")
 
 class Model
 

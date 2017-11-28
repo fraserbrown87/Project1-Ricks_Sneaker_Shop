@@ -1,5 +1,5 @@
-require_relative('../models/brand.rb')
-require_relative('../models/model.rb')
+require_relative('../models/brands.rb')
+require_relative('../models/models.rb')
 require('pp')
 require('pry')
 

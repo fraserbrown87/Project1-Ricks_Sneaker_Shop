@@ -1,10 +1,16 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
-require_relative( '../models/model.rb' )
+require_relative( '../models/brands.rb' )
+require_relative( '../models/models.rb' )
+
 
 get '/models' do
-  @model_name = Model.all()
+  @models = Model.all()
   erb ( :"models/index" )
+end
+
+get '/models/new' do # new
+  erb( :"models/new" )
 end
 
 get '/models/:id' do
