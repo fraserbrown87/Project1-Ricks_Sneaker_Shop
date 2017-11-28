@@ -11,16 +11,17 @@ get '/brands/new' do # new
   erb( :"brands/new" )
 end
 
+post '/brands' do # create
+  @brand = Brand.new( params )
+  @brand.save()
+  erb (:"brands/index")
+end
+
 get '/brands/:id' do
   @brand_name = Brand.find(params['id'].to_i)
   erb( :"brands/show" )
 end
 #
-# post '/brands' do # create
-#   @brand = Brand.new( params )
-#   @brand.save()
-#   redirect to "/brands"
-# end
 # #
 # get '/brands/:id/edit' do # edit
 #   @brand = Brand.find( params[:id] )
