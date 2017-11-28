@@ -10,6 +10,7 @@ get '/models' do
 end
 
 get '/models/new' do # new
+  @brands = Brand.all()
   erb( :"models/new" )
 end
 
