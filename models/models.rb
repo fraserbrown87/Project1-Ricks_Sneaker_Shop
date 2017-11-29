@@ -3,7 +3,7 @@ require_relative("./brands.rb")
 
 class Model
 
-  attr_reader :id, :model_name, :brand_id, :quantity, :style
+  attr_reader :id, :model_name, :brand_id, :quantity, :style, :buy_price, :sell_price
 
   def initialize(options)
     @id = options['id'].to_i
@@ -11,6 +11,8 @@ class Model
     @brand_id = options['brand_id'].to_i
     @quantity = options['quantity'].to_i
     @style = options['style']
+    @buy_price = options['buy_price'].to_i
+    @sell_price = options['sell_price'].to_i
   end
 
   def save()
@@ -19,14 +21,16 @@ class Model
       model_name,
       brand_id,
       quantity,
-      style
+      style,
+      buy_price,
+      sell_price
     )
     VALUES
     (
-      $1, $2, $3, $4
+      $1, $2, $3, $4, $5, $6
     )
     RETURNING *"
-    values = [@model_name, @brand_id, @quantity, @style]
+    values = [@model_name, @brand_id, @quantity, @style, @buy_price, @sell_price]
     result = SqlRunner.run(sql, values)
     @id = result.first()['id'].to_i
   end
@@ -38,13 +42,15 @@ class Model
       model_name,
       brand_id,
       quantity,
-      style
+      style,
+      buy_price,
+      sell_price
       ) =
       (
-        $1, $2, $3, $4
+        $1, $2, $3, $4, $5, $6
       )
-      WHERE id = $5"
-      values = [@model_name, @brand_id, @quantity, @style, @id]
+      WHERE id = $7"
+      values = [@model_name, @brand_id, @quantity, @style, @buy_price, @sell_price, @id]
       SqlRunner.run( sql, values )
     end
 
