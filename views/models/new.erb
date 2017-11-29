@@ -6,16 +6,16 @@
     <% @brands.each do |brand| %>
     <option value=<%= brand.id %>><%= brand.brand_name %></option>
     <% end %>
-  </select>
+  </select><div>
 
-<label for="model_name">Model Name:</label>
-<input id="model_name" type="text" name="model_name" />
+<label for="model_name">Model Name:</label><div>
+<input id="model_name" type="text" name="model_name" /><div>
 
-<label for="style">Style:</label>
-<input id="style" type="text" name="style" />
+<label for="style">Style:</label><div>
+<input id="style" type="text" name="style" /><div>
 
-<label for="quantity">Quantity:</label>
-<input id="quantity" type="number" name="quantity" />
+<label for="quantity">Quantity:</label><div>
+<input id="quantity" type="number" name="quantity" /><div>
 
 <input type='submit' value="Submit"/>
 

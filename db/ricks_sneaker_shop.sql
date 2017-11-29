@@ -11,5 +11,7 @@ CREATE TABLE models (
   model_name VARCHAR(255),
   brand_id INT4 REFERENCES brands(id),
   quantity INT2,
-  style VARCHAR(255)
+  style VARCHAR(255),
+  buy_price INT2,
+  sell_price INT2
 );
