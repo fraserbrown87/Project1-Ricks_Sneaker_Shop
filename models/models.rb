@@ -3,13 +3,14 @@ require_relative("./brands.rb")
 
 class Model
 
-  attr_reader :id, :model_name, :brand_id, :quantity
+  attr_reader :id, :model_name, :brand_id, :quantity, :style
 
   def initialize(options)
     @id = options['id'].to_i
     @model_name = options['model_name']
     @brand_id = options['brand_id'].to_i
     @quantity = options['quantity'].to_i
+    @style = options['style']
   end
 
   def save()
@@ -17,14 +18,15 @@ class Model
     (
       model_name,
       brand_id,
-      quantity
+      quantity,
+      style
     )
     VALUES
     (
-      $1, $2, $3
+      $1, $2, $3, $4
     )
     RETURNING *"
-    values = [@model_name, @brand_id, @quantity]
+    values = [@model_name, @brand_id, @quantity, @style]
     result = SqlRunner.run(sql, values)
     @id = result.first()['id'].to_i
   end
@@ -36,12 +38,13 @@ class Model
       model_name,
       brand_id,
       quantity,
+      style
       ) =
       (
-        $1, $2, $3
+        $1, $2, $3, $4
       )
-      WHERE id = $4"
-      values = [@model_name, @brand_id, @quantity, @id]
+      WHERE id = $5"
+      values = [@model_name, @brand_id, @quantity, @style, @id]
       SqlRunner.run( sql, values )
     end
 
