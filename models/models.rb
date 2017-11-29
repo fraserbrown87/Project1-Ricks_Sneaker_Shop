@@ -68,4 +68,13 @@ class Model
       return Brand.new( results.first )
     end
 
+    def stock_level
+      if @quantity >= 8
+        return "High"
+      elsif @quantity >= 5
+        return "Medium"
+      else return "low"
+    end
+
   end
+end

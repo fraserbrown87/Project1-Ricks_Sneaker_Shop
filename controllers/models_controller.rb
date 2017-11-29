@@ -4,7 +4,7 @@ require_relative( '../models/brands.rb' )
 require_relative( '../models/models.rb' )
 
 
-get '/models' do
+get '/models' do # index
   @models = Model.all()
   erb ( :"models/index" )
 end
@@ -20,7 +20,7 @@ post '/models' do # create
   redirect to "/models"
 end
 
-get '/models/:id' do
+get '/models/:id' do # show
   @model_name = Model.find(params['id'].to_i)
   erb( :"models/show" )
 end
