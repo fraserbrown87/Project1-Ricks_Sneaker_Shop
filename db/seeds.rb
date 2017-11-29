@@ -24,7 +24,7 @@ model1 = Model.new({
   "quantity" => 10,
   "style" => "Street Wear",
   "buy_price" => 60,
-  "sell_price" => 120
+  "sell_price" => 119.99
   })
 model1.save
 
@@ -34,7 +34,7 @@ model2 = Model.new({
   "quantity" => 8,
   "style" => "Casual",
   "buy_price" => 35,
-  "sell_price" => 70
+  "sell_price" => 69.99
   })
 model2.save
 
@@ -44,7 +44,7 @@ model3 = Model.new({
   "quantity" => 5,
   "style" => "Runner",
   "buy_price" => 40,
-  "sell_price" => 60
+  "sell_price" => 59.99
 
   })
 model3.save
@@ -55,7 +55,7 @@ model4 = Model.new({
   "quantity" => 2,
   "style" => "Casual",
   "buy_price" => 35,
-  "sell_price" => 70
+  "sell_price" => 69.99
   })
 model4.save
 
@@ -65,7 +65,7 @@ model5 = Model.new({
   "quantity" => 2,
   "style" => "Low-top",
   "buy_price" => 35,
-  "sell_price" => 70
+  "sell_price" => 64.99
   })
 model5.save
 

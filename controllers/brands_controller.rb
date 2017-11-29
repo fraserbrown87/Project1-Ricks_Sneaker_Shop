@@ -21,21 +21,20 @@ get '/brands/:id' do
   @brand_name = Brand.find(params['id'].to_i)
   erb( :"brands/show" )
 end
+
+get '/brands/:id/edit' do # edit
+  @brand = Brand.find( params[:id] )
+  @models = Model.all
+  erb( :edit )
+end
 #
-# #
-# get '/brands/:id/edit' do # edit
-#   @brand = Brand.find( params[:id] )
-#   @models = Model.all
-#   erb( :edit )
-# end
-# #
-# put '/brands/:id' do # update
-#   Brand.new( params ).update
-#   redirect to '/brands'
-# end
-#
-# delete '/brands/:id' do # delete
-#   brand = Brand.find( params[:id] )
-#   brand.delete()
-#   redirect to '/brands'
-# end
+put '/brands/:id' do # update
+  Brand.new( params ).update
+  redirect to '/brands'
+end
+
+delete '/brands/:id' do # delete
+  brand = Brand.find( params[:id] )
+  brand.delete()
+  redirect to '/brands'
+end
