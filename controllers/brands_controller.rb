@@ -12,8 +12,8 @@ get '/brands/new' do # new
 end
 
 post '/brands' do # create
-  @brand = Brand.new( params )
-  @brand.save()
+  @brands = Brand.new( params )
+  @brands.save()
   redirect to "/brands"
 end
 
