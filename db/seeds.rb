@@ -44,7 +44,7 @@ model3 = Model.new({
   "quantity" => 5,
   "style" => "Runner",
   "buy_price" => 40,
-  "sell_price" => 80
+  "sell_price" => 60
 
   })
 model3.save

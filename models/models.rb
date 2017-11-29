@@ -11,8 +11,8 @@ class Model
     @brand_id = options['brand_id'].to_i
     @quantity = options['quantity'].to_i
     @style = options['style']
-    @buy_price = options['buy_price'].to_i
-    @sell_price = options['sell_price'].to_i
+    @buy_price = options['buy_price'].to_f
+    @sell_price = options['sell_price'].to_f
   end
 
   def save()
@@ -83,7 +83,13 @@ class Model
       elsif @quantity >= 5
         return "Medium"
       else return "low"
+      end
+    end
+
+    def calc_markup()
+      result = (@sell_price - @buy_price) / @buy_price
+      percentage = result * 100
+      return percentage.to_f.round(2)
     end
 
   end
-end
