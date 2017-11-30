@@ -24,14 +24,14 @@ class Brand
   end
 
   def delete()
-    sql = "DELETE FROM brands 
+    sql = "DELETE FROM brands
     WHERE id = $1"
     values = [@id]
     SqlRunner.run( sql, values )
   end
 
   def self.all()
-    sql = "SELECT * FROM brands"
+    sql = "SELECT * FROM brands ORDER BY brand_name"
     values = []
     brands = SqlRunner.run(sql,values)
     result = brands.map {|brand| Brand.new(brand)}

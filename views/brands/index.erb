@@ -1,23 +1,23 @@
+<nav>
+  <ul>
+    <li><a href="/">HOME</a></li>
+    <li><a href="/brands/new">ADD BRAND</a></li>
+    <li><a href="/models/new">ADD MODEL</a></li>
+  </ul>
+</nav>
 
-<a href="/">HOME</a>
-<a href="/brands/new">ADD BRAND</a>
-<a href="/models/new">ADD MODEL</a>
 
-<table style="width:100%">
+<table style="width:75%">
 <section>
-  <h2>All Brands</h2>
   <table>
     <thead>
       <tr>
-        <th>Brand Name</th>
-        <th></th>
+        <th>All Brands</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-      </tr>
       <% @brand_name.each do |brand| %>
-
         <td><%=brand.brand_name%></td>
       </tr>
       <% end %>

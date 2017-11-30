@@ -7,25 +7,24 @@ body {
 }
 
 .logo {
+  display: block;
   font-family: 'Bungee Shade', cursive;
-  text-align: left;
+  text-align: center;
   line-height: 1.1;
-  position: fixed; /* or absolute */
-  left: 40%;
-  font-size: 40px;
+  font-size: 30px;
   padding: 5px;
-  margin: 5px;
 }
 
 
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 70%;
-    background-position: center;
-    position: fixed;
-    left: 15%;
-    top: 35%;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  border-collapse: collapse;
+  width: 70%;
+  background-position: center;
+  position: fixed;
+  left: 15%;
+  top: 35%;
 }
 
 td, th {
@@ -40,22 +39,28 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 
-a:link, a:visited {
-    background-color: #dddddd;
-    border: 2px solid #dddddd;
-    border-color: black;
-    color: black;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+/*.navigation-bar {
+
+  background-color: #dddddd;
+  border: 2px solid #dddddd;
+  border-color: black;
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
 
 }
 
+.nav-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 300px 300px 0 300px;
+}*/
 
-a:hover, a:active {
-    background-color: #dddddd;
-}
 
 .stock_level_high {
   background-color: green;
