@@ -25,12 +25,14 @@ table {
   position: fixed;
   left: 15%;
   top: 35%;
+  padding: 8px;
+  border-radius: 5px;
 }
 
 td, th {
   border: 2px solid #dddddd;
   border-color: black;
-  background-color: #dddddd;
+  background-color: white;
   text-align: center;
   padding: 8px;
 }
