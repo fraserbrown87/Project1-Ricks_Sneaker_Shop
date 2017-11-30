@@ -1,19 +1,23 @@
-<nav>
-  <ul>
-    <li><a href="/">HOME</a></li>
-    <li><a href="/brands/new">ADD BRAND</a></li>
-    <li><a href="/models">CHECK STOCK</a></li>
-  </ul>
-</nav>
+<section class="nav-blocks">
+  <nav>
+    <ul>
+      <li><a href="/">HOME</a></li>
+      <li><a href="/brands/new">ADD BRAND</a></li>
+      <li><a href="/models">CHECK STOCK</a></li>
+    </ul>
+  </nav>
+</section>
 
 <section class="form-center">
 
   <form method="post" action="/models">
-    <select name="brand_id" id="brand_id">
-      <% @brands.each do |brand| %>
-      <option value=<%= brand.id %>><%= brand.brand_name %></option>
-      <% end %>
-    </select>
+    <div>
+      <select name="brand_id" id="brand_id">
+        <% @brands.each do |brand| %>
+        <option value=<%= brand.id %>><%= brand.brand_name %></option>
+        <% end %>
+      </select>
+    </div>
     <div>
       <label for="model_name">Model Name:</label>
     </div>

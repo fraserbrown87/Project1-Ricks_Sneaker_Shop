@@ -80,18 +80,24 @@ class Model
     def stock_level
       if @quantity >= 8
         return "High"
-      elsif @quantity >= 5
+      elsif @quantity >= 4
         return "Medium"
-      else return "Low"
+      elsif @quantity >= 1
+        return "Low"
+      else
+        return "Out of Stock"
       end
     end
 
     def stock_level_css
       if @quantity >= 8
         return "stock_level_high"
-      elsif @quantity >= 5
+      elsif @quantity >= 4
         return "stock_level_medium"
-      else return "stock_level_low"
+      elsif @quantity >= 1
+        return "stock_level_low"
+      else
+        return "stock_level_out_of_stock"
       end
     end
 
