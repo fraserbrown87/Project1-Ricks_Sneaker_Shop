@@ -1,0 +1,58 @@
+body {
+  background-image: url("../images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.logo {
+  font-family: 'Bungee Shade', cursive;
+  text-align: left;
+  line-height: 1.1;
+  position: fixed; /* or absolute */
+  left: 40%;
+  font-size: 40px;
+  padding: 5px;
+  margin: 5px;
+}
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+    background-position: center;
+    position: fixed;
+    left: 15%;
+    top: 35%;
+}
+
+td, th {
+    border: 2px solid #dddddd;
+    border-color: black;
+    background-color: #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+a:link, a:visited {
+    background-color: #dddddd;
+    border: 2px solid #dddddd;
+    border-color: black;
+    color: black;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+
+a:hover, a:active {
+    background-color: #dddddd;
+}
