@@ -56,3 +56,15 @@ a:link, a:visited {
 a:hover, a:active {
     background-color: #dddddd;
 }
+
+.stock_level_high {
+  background-color: green;
+}
+
+.stock_level_medium {
+  background-color: orange;
+}
+
+.stock_level_low {
+  background-color: red;
+}

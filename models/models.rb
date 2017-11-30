@@ -82,7 +82,16 @@ class Model
         return "High"
       elsif @quantity >= 5
         return "Medium"
-      else return "low"
+      else return "Low"
+      end
+    end
+
+    def stock_level_css
+      if @quantity >= 8
+        return "stock_level_high"
+      elsif @quantity >= 5
+        return "stock_level_medium"
+      else return "stock_level_low"
       end
     end
 
