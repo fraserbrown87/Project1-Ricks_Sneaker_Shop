@@ -39,28 +39,6 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 
-/*.navigation-bar {
-
-  background-color: #dddddd;
-  border: 2px solid #dddddd;
-  border-color: black;
-  color: black;
-  padding: 14px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-
-}
-
-.nav-box {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 300px 300px 0 300px;
-}*/
-
 
 .stock_level_high {
   background-color: green;
@@ -72,4 +50,31 @@ tr:nth-child(even) {
 
 .stock_level_low {
   background-color: red;
+}
+
+.form-center {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.form-center form input {
+  padding-left: 40;
+  padding-right: 40;
+  padding-top: 20;
+  padding-bottom: 20;
+  font-size: 22px;
+}
+
+.form-center form label {
+  font-size: 30px;
+  color: black;
+}
+
+.form-center form button{
+  padding: 10px;
+  background-color: green;
+  margin: 5px 5px 5px 5px;
+  font-size: 20px;
+  width: 233px;
+  margin-left: 0;
 }

@@ -6,29 +6,47 @@
   </ul>
 </nav>
 
-<form method="post" action="/models">
+<section class="form-center">
 
-  <select name="brand_id" id="brand_id">
-    <% @brands.each do |brand| %>
-    <option value=<%= brand.id %>><%= brand.brand_name %></option>
-    <% end %>
-  </select><div>
+  <form method="post" action="/models">
+    <select name="brand_id" id="brand_id">
+      <% @brands.each do |brand| %>
+      <option value=<%= brand.id %>><%= brand.brand_name %></option>
+      <% end %>
+    </select>
+    <div>
+      <label for="model_name">Model Name:</label>
+    </div>
+    <div>
+      <input id="model_name" type="text" name="model_name" />
+    </div>
+    <div>
+      <label for="style">Style:</label>
+    </div>
+    <div>
+      <input id="style" type="text" name="style" />
+    </div>
+    <div>
+      <label for="quantity">Quantity:</label>
+    </div>
+    <div>
+      <input id="quantity" type="number" name="quantity" />
+    </div>
+    <div>
+      <label for="buy_price">Buy Price:</label>
+    </div>
+    <div>
+      <input id="buy_price" type="number" step="0.01" name="buy_price" />
+    </div>
+    <div>
+      <label for="sell_price">Retail Price:</label>
+    </div>
+    <div>
+      <input id="sell_price" type="number" step="0.01" name="sell_price" />
+    </div>
+    <div>
+      <button>Add New Model>></button>
+    </div>
 
-<label for="model_name">Model Name:</label><div>
-<input id="model_name" type="text" name="model_name" /><div>
-
-<label for="style">Style:</label><div>
-<input id="style" type="text" name="style" /><div>
-
-<label for="quantity">Quantity:</label><div>
-<input id="quantity" type="number" name="quantity" /><div>
-
-<label for="buy_price">Buy Price:</label><div>
-<input id="buy_price" type="number" step="0.01" name="buy_price" /><div>
-
-<label for="sell_price">Retail Price:</label><div>
-<input id="sell_price" type="number" step="0.01" name="sell_price" /><div>
-
-<input type='submit' value="Submit"/>
-
-</form>
+  </form>
+</section>
