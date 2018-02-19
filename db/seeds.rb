@@ -62,7 +62,7 @@ model4.save
 model5 = Model.new({
   "model_name" => "Old Skool",
   "brand_id" => brand5.id,
-  "quantity" => 2,
+  "quantity" => 0,
   "style" => "Low-top",
   "buy_price" => 35,
   "sell_price" => 64.99
