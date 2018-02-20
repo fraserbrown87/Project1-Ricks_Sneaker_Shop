@@ -1,6 +1,6 @@
 # Ricks Sneaker Shop
 
-A stock tracking app that allows the user check and update inventory for different brands and styles for a Sneaker Store. This serves as a useful tool for small businesses.
+A stock tracking app that allows the user to check and update inventory for different brands and styles for a Sneaker Store. This serves as a useful tool for small businesses.
 
 ## Built with:
 
@@ -32,7 +32,7 @@ To run this web app, you will need to be able to require:
 5. Open the localhost:4567/ in your URL
 
 
-### Motivation
+## Motivation
 
 This web app was created as part of a week long project undertaken while attending CodeClan's 16-week intensive course. At the beginning of the week, we were given four briefs to choose from in which we would implement, consolidate and expand on everything we'd learnt so far.
 
@@ -46,9 +46,9 @@ This included:
 
 Despite some interesting briefs, I had an idea for a stock tracking app. As I have a background in fashion and retail I think this would be a useful app to use.
 
-### Brief
+## Brief
 
-## Rick's Sneaker Store
+### Rick's Sneaker Store
 The owner of Rick's Record Store wants an app which will help him keep on top of his store inventory. He does not want an app that customers will see, but he will use to check stock levels and see what he needs to order soon.
 
 You should be able to add stock, which would have an Artist and Album as well as the quantity available.
@@ -70,6 +70,6 @@ Any other ideas you might come up with
 **Fraser Brown** - Original author
 
 
-## License
+### License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
