@@ -49,20 +49,20 @@ Despite some interesting briefs, I had an idea for a stock tracking app. As I ha
 ## Brief
 
 ### Rick's Sneaker Store
-The owner of Rick's Record Store wants an app which will help him keep on top of his store inventory. He does not want an app that customers will see, but he will use to check stock levels and see what he needs to order soon.
+The owner of Rick's Sneaker Store wants an app which will help him keep on top of his store inventory. He does not want an app that customers will see, but he will use to check stock levels and see what he needs to order soon.
 
-You should be able to add stock, which would have an Artist and Album as well as the quantity available.
+You should be able to add stock, which would have an Brand and Style as well as the quantity available.
 
 **MVP:**
-Create albums with the quantity that are in stock
-Create artists
-Show an inventory page listing albums and artists
+Create Brands with the quantity that are in stock
+Create Styles
+Show an inventory page listing Brands and styles
 Show a stock level for the inventory items e.g. High/Medium/Low
 
 **Possible Extensions:**
 Add a buy and sell price to each stock item
 Calculate the possible markup on items and show on inventory page
-Add a genre to an Album
+Add a genre to an Brand
 Any other ideas you might come up with
 
 
